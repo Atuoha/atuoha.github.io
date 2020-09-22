@@ -650,7 +650,9 @@
             </div>
  -->
             
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFVuINwEyAfUnczGXc3RvXwzx7kGMX9ZilgnYP-iNmmRtpfQ/viewform?embedded=true" id="google-form" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFVuINwEyAfUnczGXc3RvXwzx7kGMX9ZilgnYP-iNmmRtpfQ/viewform?embedded=true" width="700" height="500" id="big-google-form" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFVuINwEyAfUnczGXc3RvXwzx7kGMX9ZilgnYP-iNmmRtpfQ/viewform?embedded=true" width="300" height="500" id="small-google-form" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
           </div>
 
         </div>
@@ -705,16 +707,18 @@
     display:none;
   }
   
-  #google-form{
-    width: 700px;
-    height: 500px;
+  #small-google-form{
+    display:none;
   }
   
   @media (min-width:992px){
-     #google-form{
-    width: 300px;
-    height: 500px;
-   }
+    #small-google-form{
+    display:block;
+    }
+    
+    #big-google-form{
+    display:none;
+    }
     
   }
 </style>
