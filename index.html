@@ -650,7 +650,7 @@
             </div>
  -->
             
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFVuINwEyAfUnczGXc3RvXwzx7kGMX9ZilgnYP-iNmmRtpfQ/viewform?embedded=true" width="700" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFVuINwEyAfUnczGXc3RvXwzx7kGMX9ZilgnYP-iNmmRtpfQ/viewform?embedded=true" id="google-form" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
           </div>
 
         </div>
@@ -703,6 +703,19 @@
 <style>
   .alerto, .sent{
     display:none;
+  }
+  
+  #google-form{
+    width: 700px;
+    height: 500px;
+  }
+  
+  @media (min-width:992px){
+     #google-form{
+    width: 300px;
+    height: 500px;
+   }
+    
   }
 </style>
 
