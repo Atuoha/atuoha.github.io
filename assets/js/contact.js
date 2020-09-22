@@ -14,14 +14,22 @@ $(document).ready( ()=>{
       type: 'POST',
       success: (callback_data=>{
         if(!callback_data.error){
-          $('.alert').fadeIn('slower');
-          $('.alert').html(`${name}, your message has been sent. I appreciate your effort (ツ)`);
-        
 
-          setTimeout( ()=>{
-             $('.alert').fadeOut('slower');
-             $('#contact').trigger('reset');
-          },5000); 
+
+//-------------------------------  INTERVALS
+        setInterval( ()=>{
+            $('.alerto').fadeIn('slower');
+            $('.alerto').html(`${name}, your message has been sent. I appreciate your effort (ツ)`);
+        },5000);   
+         
+          setInterval( ()=>{
+             $('#form-div').fadeOut('slower');
+          },15000); 
+
+          setInterval( ()=>{
+            $('.sent').fadeIn('slower');
+          },20000)
+//-----------------------------------------
   
         }
       })

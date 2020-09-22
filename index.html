@@ -620,7 +620,7 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-
+          <div id="form-div">
             <form action="contact.php" method="post"  id="contact">
               <div class="form-row">
                 <div class="col-md-6 form-group">
@@ -637,12 +637,16 @@
                 <textarea class="form-control"  required validate name="message" rows="5"  placeholder="Message"></textarea>
               </div>
               <div class="mb-3">
-                <div class="sent-message alert alert-success"></div>
+                <div class="alerto alert alert-success"></div>
               </div>
               
               <div class="text-center"><button type="submit" class="btn btn-primary">Reach out now!</button></div>
-
             </form>
+          </div> 
+
+            <div class="mb-3">
+              <div class="sent alert alert-success">Your Message has been received successfully. I'll get back to you as soon as I can :)</div>
+            </div>
 
           </div>
 
@@ -695,7 +699,7 @@
   <script src="assets/js/contact.js"></script>
 
 <style>
-  .alert{
+  .alerto, .sent{
     display:none;
   }
 </style>
