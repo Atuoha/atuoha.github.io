@@ -826,12 +826,16 @@ section {
   text-align: center;
 }
 
+
+
 .testimonials .testimonial-item .testimonial-img {
-  width: 120px;
-  border-radius: 50%;
+  width: 310px;
+  border-radius: 10%;
   border: 4px solid #fff;
   margin: 0 auto;
 }
+
+
 
 .testimonials .testimonial-item h3 {
   font-size: 20px;
