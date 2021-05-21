@@ -890,9 +890,7 @@ section {
 }
 
 @media (min-width: 792px) {
-  .testimonials .testimonial-item p {
-    width: 80%;
-  }
+  
   
   .testimonials .testimonial-item .testimonial-img {
     width: 350px;
