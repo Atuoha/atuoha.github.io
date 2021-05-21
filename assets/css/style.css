@@ -891,17 +891,24 @@ section {
   background-color: #0563bb !important;
 }
 
+@media (min-width: 792px) {
+  .testimonials .testimonial-item p {
+    width: 80%;
+  }
+  
+  .testimonials .testimonial-item .testimonial-img {
+    width: 250px;
+    border-radius: 10%;
+    border: 4px solid #fff;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 992px) {
   .testimonials .testimonial-item p {
     width: 80%;
   }
   
-    .testimonials .testimonial-item .testimonial-img {
-    width: 300px;
-    border-radius: 10%;
-    border: 4px solid #fff;
-    margin: 0 auto;
-  }
 }
 
 /*--------------------------------------------------------------
