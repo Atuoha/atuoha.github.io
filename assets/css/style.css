@@ -1,6 +1,39 @@
 /*-------------------------------------------------
   Fonts Family & Style CSS
 ---------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+.clients {
+  background: #f6f7ff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5%;
+}
+
+.clients img {
+  max-width: 150%;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
+}
+
+.clients img:hover {
+  transform: scale(1.20);
+}
+
+@media (max-width: 768px) {
+  .clients img {
+    max-width: 50%;
+  }
+}
+
+
+
+
+
 /*--  Quicksand font  --*/
 @font-face {
   font-family: "Quicksand";
