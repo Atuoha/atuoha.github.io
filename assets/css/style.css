@@ -301,7 +301,7 @@ a {
 }
 
 .custom-btn {
-  width: 130px;
+  min-width: 130px;
   height: 40px;
   color: #fff;
   padding: 10px 15px;
