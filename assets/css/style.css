@@ -314,6 +314,7 @@ a {
   position: relative;
   display: inline-block;
   outline: none;
+  border-radius: 50px;
 }
 
 .ms-btn, .ms-btn-1 {
@@ -326,7 +327,7 @@ a {
   text-decoration: none;
   color: #17181c;
   border: 1px solid #17181c;
-  border-radius: 0px;
+  border-radius: 50px;
 }
 
 .ms-btn {
@@ -1255,7 +1256,7 @@ header .ms-social li a {
   line-height: 45px;
 }
 .ms-home .ms-detail .info h1 span {
-  color: #435da5;
+  color: #4f46e5;
 }
 .ms-home .ms-detail .info h2 {
   margin-top: 15px;
@@ -1266,13 +1267,14 @@ header .ms-social li a {
 }
 .ms-home .ms-detail .info h2 span {
   margin-right: 15px;
-  color: #435da5;
+  color: #4f46e5;
 }
 .ms-home .ms-detail .info p {
   margin: 20px 0 30px 0;
   font-size: 16px;
   color: #777;
-  line-height: 28px;
+  line-height: 1.6;
+  font-weight: 500;
   letter-spacing: 0.02rem;
 }
 .ms-home .border-content {
