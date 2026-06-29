@@ -81,6 +81,17 @@ $('.navs-link').on("click", function(){
     }                
   });
 
+  /*--------------------- Toggle platforms on mobile -------------------------------- */
+  $('#toggle-clients-btn').on('click', function() {
+    $('#clients').slideToggle();
+    var currentText = $(this).text();
+    if (currentText.includes('Show')) {
+      $(this).text('Hide Platforms & Technologies');
+    } else {
+      $(this).text('Show Platforms & Technologies');
+    }
+  });
+
   /*--------------------- Replace all SVG images with inline SVG -------------------------------- */
   $(document).ready(function () {
     $('img.svg_img[src$=".svg"]').each(function () {

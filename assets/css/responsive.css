@@ -125,6 +125,9 @@
   .ms-home .ms-detail .info {
     text-align: center;
   }
+  .action-buttons {
+    justify-content: center;
+  }
   .ms-home .profile-img img {
     max-width: 250px;
   }
@@ -269,6 +272,27 @@
 @media only screen and (max-width: 767px) {
   .ms-home .border-content-color {
     width: 100%;
+  }
+  .action-buttons {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .action-buttons .custom-btn {
+    min-width: unset;
+    font-size: 13px;
+    padding: 10px 5px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: normal;
+  }
+  #clients {
+    display: none;
+  }
+  #toggle-clients-btn {
+    display: inline-block !important;
   }
   .ms-home .ms-detail .info h1 {
     font-size: 32px;

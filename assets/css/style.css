@@ -26,7 +26,8 @@
 
 @media (max-width: 768px) {
   .clients img {
-    max-width: 50%;
+    max-width: 80% !important;
+    width: auto !important;
   }
 }
 
@@ -1213,7 +1214,7 @@ header .ms-social li a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: absolute;
-  bottom: 30px;
+  bottom: 10px;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
