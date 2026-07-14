@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <title>Community Contributions - Atuoha Anthony</title>
+  
+  <link rel="icon" href="assets/img/s.png" sizes="32x32" />
+
+  <link rel="stylesheet" href="assets/css/plugins/animate.css" />
+  <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/plugins/bootstrap.css" />
+  <link rel="stylesheet" href="assets/css/plugins/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css" />
+
+  <link rel="stylesheet" id="main_style" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <style>
+    .community-page-container {
+      min-height: 100vh;
+      padding-bottom: 80px;
+      background-color: #f8f9fa;
+      font-family: "Quicksand", "Montserrat", sans-serif;
+    }
+
+    .community-header {
+      text-align: center;
+      padding: 80px 20px 30px;
+      position: relative;
+    }
+
+    .community-header h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #333;
+      letter-spacing: -0.5px;
+    }
+
+    .community-header p {
+      font-size: 0.95rem;
+      color: #888;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      color: #555;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.3s ease, transform 0.3s ease;
+      z-index: 10;
+    }
+    
+    .back-btn:hover {
+      color: #111;
+      transform: translateX(-5px);
+    }
+
+    .tabs-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
+
+    .tab-btn {
+      padding: 10px 22px;
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      color: #555;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-btn .count {
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.06);
+      color: #555;
+      padding: 2px 8px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .tab-btn:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    .tab-btn.active {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .tab-btn.active .count {
+      background: rgba(255, 255, 255, 0.18);
+      color: #fff;
+    }
+
+    .content-tab {
+      display: none;
+      padding: 0 5vw;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .content-tab.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .community-card {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 545px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+    }
+
+    .community-card.expanded-card {
+      height: auto;
+    }
+
+    .community-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+      border-color: rgba(0, 0, 0, 0.12);
+    }
+
+    /* Image Carousel */
+    .card-carousel {
+      position: relative;
+      width: 100%;
+      height: 230px;
+      flex-shrink: 0;
+      background: #f4f4f4;
+      overflow: hidden;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .card-carousel .carousel-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.4s ease;
+    }
+
+    .card-carousel .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .card-carousel .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .community-card:hover .carousel-slide img {
+      transform: scale(1.05);
+    }
+
+    /* Carousel Navigation Arrows */
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #111;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.3s ease, background 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .community-card:hover .carousel-arrow {
+      opacity: 1;
+    }
+
+    .carousel-arrow:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .carousel-arrow.prev { left: 8px; }
+    .carousel-arrow.next { right: 8px; }
+
+    /* Carousel Dots */
+    .carousel-dots {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 2;
+    }
+
+    .carousel-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+
+    .carousel-dot.active {
+      background: #fff;
+      transform: scale(1.3);
+    }
+
+    /* Image count indicator */
+    .img-count {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      padding: 2px 9px;
+      border-radius: 12px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      z-index: 2;
+      letter-spacing: 0.5px;
+    }
+
+    .card-body {
+      padding: 16px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .expanded-card .card-body {
+      overflow: visible;
+    }
+
+    .card-badge {
+      display: inline-block;
+      width: fit-content;
+      padding: 4px 12px;
+      background: rgba(0, 0, 0, 0.06);
+      color: #111;
+      border-radius: 20px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 6px;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      min-height: 2.75em;
+      flex-shrink: 0;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.55;
+      margin-bottom: 6px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      min-height: 4.65em;
+      flex-shrink: 0;
+    }
+
+    .card-desc.expanded {
+      -webkit-line-clamp: unset;
+      overflow: visible;
+    }
+
+    .see-more-btn {
+      background: none;
+      border: none;
+      color: #111;
+      font-weight: 700;
+      font-size: 0.75rem;
+      cursor: pointer;
+      padding: 0;
+      margin-bottom: 12px;
+      align-self: flex-start;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .see-more-btn:hover {
+      color: #555;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+      font-size: 0.78rem;
+      color: #777;
+      min-height: 28px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .expanded-card .card-meta {
+      overflow: visible;
+    }
+
+    .card-meta span {
+      background: #f4f6f8;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .card-links {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      margin-top: auto;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+      scrollbar-color: #ccc transparent;
+    }
+
+    .card-links::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    .card-links::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .card-links::-webkit-scrollbar-thumb {
+      background: #ddd;
+      border-radius: 10px;
+    }
+
+    .card-links::-webkit-scrollbar-thumb:hover {
+      background: #bbb;
+    }
+
+    .card-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      width: auto;
+      padding: 8px 14px;
+      text-align: center;
+      background: #f8f9fa;
+      color: #333;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.75rem;
+      transition: all 0.3s ease;
+      border: 1px solid #eaeaea;
+    }
+
+    .card-link-btn:hover {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+
+    .card-link-btn.secondary {
+      background: transparent;
+      border: 1px solid #ddd;
+      color: #555;
+      padding: 8px 14px;
+      font-size: 0.72rem;
+    }
+
+    .card-link-btn.secondary:hover {
+      background: #222;
+      color: #fff;
+      border-color: #222;
+    }
+
+    @media (max-width: 1100px) {
+      .community-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .community-header h1 { font-size: 1.6rem; }
+      .back-btn { top: 20px; left: 20px; font-size: 1rem; }
+      .community-grid { grid-template-columns: 1fr; gap: 16px; }
+      .community-card { height: 520px; }
+      .card-carousel { height: 220px; }
+      .carousel-arrow { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body class="body-bg">
+  <div id="overlay_shine"></div>
+  
+  <div class="community-page-container">
+    <a href="index.html" class="back-btn"><i class="fa fa-arrow-left"></i> Back to Home</a>
+
+    <div class="community-header">
+      <h1>Few Community Contributions</h1>
+      <p>A small selection of speaking engagements, articles, recognitions, mentorships, and projects shared with the developer community.</p>
+    </div>
+
+    <div class="tabs-container" id="tabsContainer"></div>
+
+    <div id="all" class="content-tab active">
+      <div class="community-grid" id="all-grid"></div>
+    </div>
+
+    <div id="articles" class="content-tab">
+      <div class="community-grid" id="articles-grid"></div>
+    </div>
+
+    <div id="speaking" class="content-tab">
+      <div class="community-grid" id="speaking-grid"></div>
+    </div>
+
+    <div id="projects" class="content-tab">
+      <div class="community-grid" id="projects-grid"></div>
+    </div>
+
+    <div id="recognition" class="content-tab">
+      <div class="community-grid" id="recognition-grid"></div>
+    </div>
+
+    <div id="judge" class="content-tab">
+      <div class="community-grid" id="judge-grid"></div>
+    </div>
+  </div>
+
+  <!--
+    ============================================================
+    DATA FILE: All contribution data lives in community-data.js
+    To add a new contribution, edit: assets/js/community-data.js
+    See the instructions at the top of that file.
+    ============================================================
+  -->
+  <script src="assets/js/community-data.js"></script>
+
+  <script>
+    // Use the data from the external community-data.js file
+    const data = communityData;
+
+    const DESC_TRUNCATE_THRESHOLD = 150; // characters, roughly 3 lines
+
+    const tabsConfig = [
+      { key: 'all', label: 'All Contributions' },
+      { key: 'articles', label: 'Articles' },
+      { key: 'speaking', label: 'Speaking & Events' },
+      { key: 'projects', label: 'Projects' },
+      { key: 'recognition', label: 'Recognition' },
+      { key: 'judge', label: 'Judging' },
+    ];
+
+    function getItemsFor(key) {
+      if (key === 'all') {
+        return [...data.articles, ...data.speaking, ...data.projects, ...data.recognition];
+      }
+      return data[key];
+    }
+
+    function renderTabs() {
+      const container = document.getElementById('tabsContainer');
+      container.innerHTML = tabsConfig.map((tab, i) => {
+        const count = getItemsFor(tab.key).length;
+        return `<button class="tab-btn${i === 0 ? ' active' : ''}" data-tab="${tab.key}" onclick="showTab('${tab.key}')">${tab.label} <span class="count">${count}</span></button>`;
+      }).join('');
+    }
+
+    function buildCarouselHTML(images, title) {
+      const imgArr = images || ['assets/img/s.png'];
+      const hasMultiple = imgArr.length > 1;
+      const uniqueId = 'carousel-' + Math.random().toString(36).substr(2, 9);
+
+      let html = `<div class="card-carousel" id="${uniqueId}" data-index="0">`;
+
+      // Image count badge
+      if (hasMultiple) {
+        html += `<span class="img-count">${imgArr.length} photos</span>`;
+      }
+
+      // Track with slides
+      html += `<div class="carousel-track">`;
+      imgArr.forEach(src => {
+        html += `<div class="carousel-slide"><img src="${src}" alt="${title}" onerror="this.onerror=null; this.src='assets/img/s.png';"></div>`;
+      });
+      html += `</div>`;
+
+      // Arrows (only if multiple images)
+      if (hasMultiple) {
+        html += `<button class="carousel-arrow prev" onclick="slideCarousel('${uniqueId}', -1)"><i class="fa fa-chevron-left"></i></button>`;
+        html += `<button class="carousel-arrow next" onclick="slideCarousel('${uniqueId}', 1)"><i class="fa fa-chevron-right"></i></button>`;
+
+        // Dots
+        html += `<div class="carousel-dots">`;
+        imgArr.forEach((_, i) => {
+          html += `<button class="carousel-dot${i === 0 ? ' active' : ''}" onclick="goToSlide('${uniqueId}', ${i})"></button>`;
+        });
+        html += `</div>`;
+      }
+
+      html += `</div>`;
+      return html;
+    }
+
+    function buildLinksHTML(links) {
+      if (!links || links.length === 0) return '';
+
+      let html = `<div class="card-links">`;
+      html += `<a href="${links[0]}" target="_blank" class="card-link-btn">Learn More</a>`;
+
+      // Additional links (YouTube, etc.)
+      for (let i = 1; i < links.length; i++) {
+        const url = links[i];
+        let label = 'View Link';
+        if (url.includes('youtube.com') || url.includes('youtu.be')) {
+          label = 'Watch Recording';
+        } else if (url.includes('gdg.community.dev')) {
+          label = 'Event Page';
+        } else if (url.includes('linkedin.com')) {
+          label = 'LinkedIn Post';
+        } else if (url.includes('spaceappschallenge.org')) {
+          label = 'Space Apps';
+        } else if (url.includes('nasa.gov')) {
+          label = 'NASA';
+        } else if (url.includes('github.com')) {
+          label = 'GitHub';
+        }
+        html += `<a href="${url}" target="_blank" class="card-link-btn secondary">${label}</a>`;
+      }
+      html += `</div>`;
+      return html;
+    }
+
+    function renderCards(items, containerId) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = items.map(item => {
+        const images = item.images || (item.img ? [item.img] : ['assets/img/s.png']);
+        const links = item.links || (item.link ? [item.link] : []);
+        const loc = item.loc || item.location || '';
+        const needsToggle = item.desc && item.desc.length > DESC_TRUNCATE_THRESHOLD;
+
+        return `
+          <div class="community-card">
+            ${buildCarouselHTML(images, item.title)}
+            <div class="card-body">
+              <span class="card-badge">${item.badge}</span>
+              <h3 class="card-title">${item.title}</h3>
+              <p class="card-desc">${item.desc}</p>
+              ${needsToggle ? `<button class="see-more-btn" onclick="toggleDesc(this)">See more</button>` : ''}
+              <div class="card-meta">
+                ${item.org ? `<span><i class="fa fa-building-o"></i> ${item.org}</span>` : ''}
+                ${loc ? `<span><i class="fa fa-map-marker"></i> ${loc}</span>` : ''}
+              </div>
+              ${buildLinksHTML(links)}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleDesc(btn) {
+      const desc = btn.previousElementSibling;
+      const expanded = desc.classList.toggle('expanded');
+      btn.textContent = expanded ? 'Hide' : 'See more';
+    }
+
+    function slideCarousel(id, direction) {
+      const el = document.getElementById(id);
+      const track = el.querySelector('.carousel-track');
+      const total = track.children.length;
+      let idx = parseInt(el.dataset.index) + direction;
+      if (idx < 0) idx = total - 1;
+      if (idx >= total) idx = 0;
+      el.dataset.index = idx;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+
+      el.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === idx);
+      });
+    }
+
+    function goToSlide(id, idx) {
+      const el = document.getElementById(id);
+      const track = el.querySelector('.carousel-track');
+      el.dataset.index = idx;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+
+      el.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === idx);
+      });
+    }
+
+    function showTab(tab) {
+      document.querySelectorAll('.content-tab').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(tab).classList.add('active');
+      document.querySelector(`.tab-btn[data-tab="${tab}"]`).classList.add('active');
+
+      renderCards(getItemsFor(tab), `${tab}-grid`);
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderTabs();
+      renderCards(getItemsFor('all'), 'all-grid');
+    });
+  </script>
+
+  <!-- Theme Custom Cursors -->
+  <div class="ms-cursor"></div>
+  <div class="ms-cursor-2"></div>
+
+  <!-- Plugins JS -->
+  <script src="assets/js/plugins/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/plugins/tilt.jquery.js"></script>
+  <script src="assets/js/plugins/snow.js"></script>
+  <script src="assets/js/ms-tools.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
