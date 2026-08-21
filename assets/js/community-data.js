@@ -46,6 +46,47 @@ const communityData = {
   // ARTICLES
   // ────────────────────────────────────────────────────────────
   articles: [
+    {
+    title: "How to Work with Material and Cupertino Decoupling in Flutter [Full Handbook]",
+    desc: "This publication provides a complete practical guide to Flutter 3.47’s Material and Cupertino decoupling, covering the new standalone packages, the reasons behind the architectural change, migration options, compatibility with existing dependencies and widgets, localization changes, and the full deprecation timeline for the old imports.",
+    org: "freeCodeCamp.org",
+    loc: "Online (Article)",
+    badge: "Article",
+    images: [
+      "https://cdn.hashnode.com/uploads/covers/5e1e335a7a1d3fcc59028c64/341d236f-85ed-43be-871d-bf4b3647fa22.png"
+    ],
+    links: [
+      "https://www.freecodecamp.org/news/how-to-work-with-material-and-cupertino-decoupling-in-flutter-full-handbook/"
+    ]
+  },
+  {
+    title: "How to Automate Flutter Releases with Fastlane and GitHub Actions for Firebase App Distribution, Google Play, TestFlight, and App Store Connect",
+    desc: "Article entails building a fully automated Flutter release pipeline using GitHub Actions and Fastlane. It covers how to automate app builds, code signing, and distribution to Firebase App Distribution, TestFlight, Google Play, and the App Store. The guide walks through configuring CI/CD workflows, managing secrets securely, and eliminating manual release tasks. By the end, every deployment is triggered by a simple Git push, saving hours of repetitive work each release cycle.",
+    org: "freeCodeCamp.org",
+    loc: "Online (Article)",
+    badge: "Article",
+    images: [
+      "https://cdn.hashnode.com/uploads/covers/5e1e335a7a1d3fcc59028c64/597b4887-5912-4a71-a0c2-ecbf8bdcfb4c.png"
+    ],
+    links: [
+      "https://www.freecodecamp.org/news/how-to-automate-flutter-releases-with-fastlane-and-github-actions/"
+    ]
+  },
+  {
+    title: "How to Test AI Features in Flutter [Full Handbook]",
+    desc: "Article entails building a reliable testing strategy for AI-powered Flutter applications beyond the AI model itself. It covers how to test repositories, state management, UI, streaming responses, and error handling using standard Flutter testing tools. The guide also explores adversarial, golden, widget, and integration testing approaches to catch real-world failures before users do. By the end, you'll have a practical framework and reusable utilities for confidently shipping AI features to production.",
+    org: "freeCodeCamp.org",
+    loc: "Online (Article)",
+    badge: "Article",
+    images: [
+      "https://cdn.hashnode.com/uploads/covers/5e1e335a7a1d3fcc59028c64/2f4f1485-15a0-482e-a5b3-02f4b9264da8.png"
+    ],
+    links: [
+      "https://www.freecodecamp.org/news/how-to-test-ai-features-in-flutter-full-handbook/"
+    ]
+  },
+  
+  
   {
     title: "How to Use Dart Dot Shorthands: A Handbook for Devs",
     desc: "Learn how Dart's dot shorthands simplify object creation, method chaining, null-aware operations, and collection handling. This handbook explains the syntax introduced in modern Dart, shows practical Flutter examples, and demonstrates how these features reduce boilerplate while making code more readable and maintainable.",
@@ -647,6 +688,19 @@ const communityData = {
   // SPEAKING & EVENTS
   // ────────────────────────────────────────────────────────────
   speaking: [
+    {
+      title: "Adapt or Outdated: Flutter is the Ultimate Engine for the Agentic Era with Anna muzykina",
+      desc: "Explore how Flutter is evolving from a UI framework into a powerful host for AI agents. This session covers practical A2A and A2UI patterns, Gemini-powered reasoning loops, and how to build responsive, agent-driven experiences using Flutter’s existing ecosystem.",
+      org: "flutterCon / next.app devCon 2026",
+      loc: "Berlin, Germany",
+      badge: "Conference",
+      images: [
+        "assets/img/speaking/fluttercon.png"
+      ],
+      links: [
+        "https://www.linkedin.com/posts/atuoha-anthony_will-be-speaking-alongside-anna-at-fluttercon-activity-7496198017314807809-7Py3?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACwyGPUBBsCoiAfb8rqh-VMxPiafwnSL3RY"
+      ]
+    },
      {
       title: "Build with AI 2026",
       desc: "A hands-on workshop exploring AI agent workflows in Flutter using Antigravity and Stitch to build intelligent, production-ready applications.",
@@ -654,11 +708,25 @@ const communityData = {
       loc: "Surrey, British Columbia Canada",
       badge: "Event",
       images: [
-        "https://media.licdn.com/dms/image/v2/D5622AQH5F3M6V27WRw/feedshare-shrink_1280/B56Z39PFhcIoAM-/0/1778070083953?e=1785369600&v=beta&t=8tGAaimp0mMR-lvlZVteP04dPWpG8fEF9R_MMpP5HVs",
+        "assets/img/speaking/buildai.jpeg",
       ],
       links: [
         "https://gdg.community.dev/events/details/google-gdg-surrey-presents-building-flutter-apps-with-ai-agents-using-antigravity-amp-stitch-build-with-ai/",
         "https://www.youtube.com/watch?v=PhqmtvvHyvc"
+      ]
+    },
+
+      {
+      title: "GDG London AI DevCamp",
+      desc: "The 5th session of AI DevCamp 2026 focused on advanced AI agent concepts, helping participants move beyond the basics and explore how to build practical, useful, and real-world AI agents. The session also featured a show-and-tell where participants shared their projects, ideas, and progress, creating an opportunity for learning, feedback, and community collaboration.",
+      org: "GDG London",
+      loc: "London, UK",
+      badge: "DevCamp",
+      images: [
+        "assets/img/speaking/devcamp.png"
+      ],
+      links: [
+        "https://www.linkedin.com/posts/google-developers-london_aidevcamp-gdglondon-buildwithai-activity-7458258863113277440-Jrds?utm_source=share&utm_medium=member_desktop&rcm=ACoAACwyGPUBBsCoiAfb8rqh-VMxPiafwnSL3RY"
       ]
     },
 
@@ -2045,6 +2113,22 @@ const communityData = {
   // ────────────────────────────────────────────────────────────
   recognition: [
 
+     {
+      title: "Shorebird Community Ambassador",
+      desc: "I was selected as one of the first Shorebird Community Ambassadors, a group of Flutter developers passionate about building high-quality apps with Flutter and sharing their knowledge with the community.",
+      org: "Shorebird",
+      loc: "-",
+      badge: "Community Program",
+      images: [
+        "assets/img/speaking/amb.png",
+
+      ],
+      links: [
+        "https://shorebird.dev/blog/meet-our-first-shorebird-community-ambassadors",
+       
+      ]
+    },
+
     {
       title: "Google Developer Expert (GDE) Flutter & Dart",
       desc: "Endorsed as a Member of the Google Developer Expert program for Flutter and Dart in 2025. Google Developer Experts are experienced Google technology experts, influencers, and thought leaders.",
@@ -2052,15 +2136,12 @@ const communityData = {
       loc: "-",
       badge: "Certification",
       images: [
-        "https://cdn.hashnode.com/res/hashnode/image/upload/v1749789210026/5c52945c-04bf-4c6f-a912-f2c25d48f850.png",
         "https://cdn.hashnode.com/res/hashnode/image/upload/v1749789237374/ac9abf02-68d2-4019-a928-94a359378341.png",
-        "https://cdn.hashnode.com/res/hashnode/image/upload/v1749789265016/584ced6e-f13d-432d-b97d-8b89522dc52b.png",
-        "https://cdn.hashnode.com/res/hashnode/image/upload/v1749790935593/53efae48-3b14-4211-b06c-0f43a8ade626.png",
-        "https://media.licdn.com/dms/image/v2/D4E22AQG9MCfakzFzDQ/feedshare-shrink_1280/B4EZ2QfajlJkAM-/0/1776245649162?e=1785369600&v=beta&t=wArGQDodj2vUPrs67lt-2UtSWq_N2xFDqCiqk9uELnI"
+        "https://cdn.hashnode.com/res/hashnode/image/upload/v1749789210026/5c52945c-04bf-4c6f-a912-f2c25d48f850.png",
       ],
       links: [
         "https://developers.google.com/community/experts",
-       "https://sessionize.com/google-developer-experts?q=Atuoha%20Anthony"
+       
       ]
     },
 
