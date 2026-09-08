@@ -46,6 +46,21 @@ const communityData = {
   // ARTICLES
   // ────────────────────────────────────────────────────────────
   articles: [
+
+  {
+    title: "How to Use Skills in Agentic Flutter Development: A Handbook for Devs",
+   desc: "This publication covers how AI coding agents can be taught your Flutter engineering practices through agent skills, including architecture patterns, coding conventions, project structure, testing standards, and quality guidelines. It explores official Flutter and Dart skills, how to configure them across major AI coding agents, and how to create custom skills that produce consistent, production-ready code tailored to your codebase.",
+    org: "freeCodeCamp.org",
+    loc: "Online (Article)",
+    badge: "Article",
+    images: [
+    "https://cdn.hashnode.com/uploads/covers/5e1e335a7a1d3fcc59028c64/aa0f5630-f617-4945-aa3a-5c962cb1609a.png"
+    ],
+    links: [
+      "https://www.freecodecamp.org/news/how-to-use-skills-in-agentic-flutter-development-a-handbook-for-devs/"
+    ]
+  },
+
     {
     title: "How to Work with Material and Cupertino Decoupling in Flutter [Full Handbook]",
     desc: "This publication provides a complete practical guide to Flutter 3.47’s Material and Cupertino decoupling, covering the new standalone packages, the reasons behind the architectural change, migration options, compatibility with existing dependencies and widgets, localization changes, and the full deprecation timeline for the old imports.",
@@ -695,7 +710,7 @@ const communityData = {
       loc: "Berlin, Germany",
       badge: "Conference",
       images: [
-        "assets/img/speaking/fluttercon.png"
+        "assets/img/general/fluttercon.png"
       ],
       links: [
         "https://www.linkedin.com/posts/atuoha-anthony_will-be-speaking-alongside-anna-at-fluttercon-activity-7496198017314807809-7Py3?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACwyGPUBBsCoiAfb8rqh-VMxPiafwnSL3RY"
@@ -708,7 +723,7 @@ const communityData = {
       loc: "Surrey, British Columbia Canada",
       badge: "Event",
       images: [
-        "assets/img/speaking/buildai.jpeg",
+        "assets/img/general/buildai.jpeg",
       ],
       links: [
         "https://gdg.community.dev/events/details/google-gdg-surrey-presents-building-flutter-apps-with-ai-agents-using-antigravity-amp-stitch-build-with-ai/",
@@ -723,7 +738,7 @@ const communityData = {
       loc: "London, UK",
       badge: "DevCamp",
       images: [
-        "assets/img/speaking/devcamp.png"
+        "assets/img/general/devcamp.png"
       ],
       links: [
         "https://www.linkedin.com/posts/google-developers-london_aidevcamp-gdglondon-buildwithai-activity-7458258863113277440-Jrds?utm_source=share&utm_medium=member_desktop&rcm=ACoAACwyGPUBBsCoiAfb8rqh-VMxPiafwnSL3RY"
@@ -1543,6 +1558,19 @@ const communityData = {
   // PROJECTS
   // ────────────────────────────────────────────────────────────
   projects: [
+     {
+    title: "Fintech Card & Wallet App",
+    desc: "A modern mobile banking app for managing cards, payments, transactions, and personal finances.",
+    org: "Flutter",
+    loc: "Reference",
+    badge: "Fintech",
+    images: [
+      "assets/img/general/p1.png"
+    ],
+    links: [
+      "https://github.com/Atuoha/fintech_mck",
+    ]
+  },
     {
     title: "Formula 1 Tracker",
     desc: "A Flutter application for tracking Formula 1 teams, drivers, races, and standings with a modern, responsive user interface built using Flutter and Dart.",
@@ -2120,7 +2148,7 @@ const communityData = {
       loc: "-",
       badge: "Community Program",
       images: [
-        "assets/img/speaking/amb.png",
+        "assets/img/general/amb.png",
 
       ],
       links: [
