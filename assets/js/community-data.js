@@ -1,44 +1,4 @@
-/**
- * ============================================================
- * COMMUNITY CONTRIBUTIONS DATA
- * ============================================================
- *
- * HOW TO ADD A NEW CONTRIBUTION:
- *
- * 1. Find the correct category array below:
- *    - articles   --> For published articles/tutorials
- *    - speaking   --> For talks, conferences, bootcamps, events
- *    - projects   --> For open source projects and apps
- *    - recognition --> For awards, mentorships, certifications, judging
- *
- * 2. Copy the template below and paste it inside the array:
- *
- *    {
- *      title: "Your Title Here",
- *      desc: "A short description of the contribution.",
- *      org: "Organizer Name",
- *      loc: "City, Country",
- *      badge: "Article",  // or "Event", "Conference", "Bootcamp", "Recognition", etc.
- *      images: [
- *        "https://your-image-url-1.png",
- *        "https://your-image-url-2.png"   // Add more images if needed
- *      ],
- *      links: [
- *        "https://your-main-link.com",
- *        "https://youtube.com/watch?v=xyz" // Add more links if needed
- *      ]
- *    },
- *
- * 3. Save this file. The changes will appear on community.html.
- *
- * NOTES:
- *   - "images" is an ARRAY. Use ["url"] for one image, or ["url1", "url2"] for multiple.
- *   - "links" is an ARRAY. The first link is used as the primary "Learn More" button.
- *   - Always add a trailing comma after the closing } of each entry.
- *   - Keep entries in chronological order (newest first).
- *
- * ============================================================
- */
+
 
 const communityData = {
 

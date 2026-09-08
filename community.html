@@ -188,6 +188,12 @@
       height: 100%;
     }
 
+    .card-carousel .carousel-slide a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     .card-carousel .carousel-slide img {
       width: 100%;
       height: 100%;
@@ -551,7 +557,7 @@
       // Track with slides
       html += `<div class="carousel-track">`;
       imgArr.forEach(src => {
-        html += `<div class="carousel-slide"><img src="${src}" alt="${title}" onerror="this.onerror=null; this.src='assets/img/s.png';"></div>`;
+        html += `<div class="carousel-slide"><a data-fancybox="gallery-${uniqueId}" href="${src}"><img src="${src}" alt="${title}" onerror="this.onerror=null; this.src='assets/img/s.png';"></a></div>`;
       });
       html += `</div>`;
 
@@ -683,6 +689,7 @@
   <!-- Plugins JS -->
   <script src="assets/js/plugins/jquery-3.5.1.min.js"></script>
   <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/plugins/jquery.fancybox.min.js"></script>
   <script src="assets/js/plugins/tilt.jquery.js"></script>
   <script src="assets/js/plugins/snow.js"></script>
   <script src="assets/js/ms-tools.js"></script>
