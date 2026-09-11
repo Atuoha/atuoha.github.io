@@ -7,6 +7,19 @@ const communityData = {
   // ────────────────────────────────────────────────────────────
   articles: [
 
+     {
+    title: "How to Implement LEGO Architecture in Flutter [Full Handbook] ",
+    desc:"This handbook explores how the simple way LEGO bricks connect can inspire a better approach to building Flutter applications. It shows how to break an application into independent pieces that work together through clear connection points without exposing their internal details. It gradually introduces this mindset through practical Flutter examples and explains how it connects with Clean Architecture. The goal is to help you build Flutter applications that remain easier to understand, test, change, and scale as they grow.",
+    org: "freeCodeCamp.org",
+    loc: "Online (Article)",
+    badge: "Article",
+    images: [
+    "https://cdn.hashnode.com/uploads/covers/5e1e335a7a1d3fcc59028c64/b53122ab-f3d5-4b7e-a4d1-6e42e01cbe02.png"
+    ],
+    links: [
+      "https://www.freecodecamp.org/news/how-to-implement-lego-architecture-in-flutter-handbook/"
+    ]
+  },
   {
     title: "How to Use Skills in Agentic Flutter Development: A Handbook for Devs",
    desc: "This publication covers how AI coding agents can be taught your Flutter engineering practices through agent skills, including architecture patterns, coding conventions, project structure, testing standards, and quality guidelines. It explores official Flutter and Dart skills, how to configure them across major AI coding agents, and how to create custom skills that produce consistent, production-ready code tailored to your codebase.",
