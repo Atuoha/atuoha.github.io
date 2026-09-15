@@ -686,7 +686,9 @@ const communityData = {
         "assets/img/general/fluttercon.png"
       ],
       links: [
-        "https://www.linkedin.com/posts/atuoha-anthony_will-be-speaking-alongside-anna-at-fluttercon-activity-7496198017314807809-7Py3?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACwyGPUBBsCoiAfb8rqh-VMxPiafwnSL3RY"
+        "https://www.linkedin.com/posts/atuoha-anthony_will-be-speaking-alongside-anna-at-fluttercon-activity-7496198017314807809-7Py3?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACwyGPUBBsCoiAfb8rqh-VMxPiafwnSL3RY",
+       "https://www.nextappcon.com/fluttercon",
+        "https://www.nextappcon.com/fluttercon-new-speakers/atuoha-anthony",
       ]
     },
      {
