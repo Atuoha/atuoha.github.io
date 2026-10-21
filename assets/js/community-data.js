@@ -2231,6 +2231,22 @@ const communityData = {
   // JUDGING
   // ────────────────────────────────────────────────────────────
   judge: [
+
+    {
+      title: "NASA Space Apps Ahlen 2026 - Judge",
+      desc: "Serving as a judge for NASA Space Apps Challenge Ahlen 2026, evaluating innovative solutions submitted by participants. Leveraging expertise as a Google Developer Expert in Flutter and Dart, assessing technical quality, creativity, and feasibility of projects. Also reviewed Geodata Innovator, a web-based application designed to help users interactively explore and analyze NASA's high-resolution satellite imagery.",
+      org: "NASA + GDG Ahlen",
+      loc: "Ahlen, Germany",
+      badge: "Judging",
+      images: [
+       "assets/img/general/spaceapps.png"
+      ],
+      links: [
+        "https://www.spaceappschallenge.org/2026/local-events/ahlen/",
+        "https://www.spaceappschallenge.org/2026/",
+      ]
+    },
+    ,
  {
       title: "3MTT Nigeria Cohort 3 Virtual Hackathon Finals Judge",
       desc: "Served as a judge for the 3MTT Nigeria Cohort 3 Virtual Hackathon Finals, where the winning team represents Lagos at the South-West Regional Hackathon.",
