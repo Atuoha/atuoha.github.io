@@ -2240,7 +2240,7 @@ const communityData = {
       badge: "Judging",
       images: [
        "assets/img/general/spaceapps.jpeg",
-       "assets/img/general/spaceapps2.jpg"
+       "assets/img/general/space-judge2.jpeg"
       ],
       links: [
         "https://www.spaceappschallenge.org/2026/local-events/ahlen/",
