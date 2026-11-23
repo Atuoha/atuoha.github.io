@@ -2239,7 +2239,8 @@ const communityData = {
       loc: "Ahlen, Germany",
       badge: "Judging",
       images: [
-       "assets/img/general/spaceapps.jpeg"
+       "assets/img/general/spaceapps.jpeg",
+       "assets/img/general/spaceapps2.jpg"
       ],
       links: [
         "https://www.spaceappschallenge.org/2026/local-events/ahlen/",
